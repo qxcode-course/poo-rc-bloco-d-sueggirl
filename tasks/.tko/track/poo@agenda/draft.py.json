@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_15-20-40",
+            "content": "@@ -1,2 +1,24 @@\n-%0A\n+@@ -1,2 +0,0 @@%0A-%250A%250A\n %0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-12-02_15-22-53",
+            "content": "@@ -1,42 +1,2 @@\n %0A%0A\n-%0A%0Aelifee%0A%0A%0Aelife%0Ae%0A%0Aelife%0Aelife%0Aelife%0A%0A%0A\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-12-02_15-31-03",
+            "content": "@@ -39,23 +39,4 @@\n e%0A%0A%0A\n-ygi%0A%0Akmmlk match%0A%0A%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-02_15-56-03",
+            "content": "@@ -54,11 +54,8 @@\n match%0A%0A%0A\n-%0A%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-02_16-26-31",
+            "content": "@@ -61,49 +61,4 @@\n %0A%0A%0A%0A\n-%0A%0A%5D%0A%0A%0A%0A%0A%0Allll%0A%0Al%0Al%0Al%0Al%0A%0Al%0All%0All%0All%0A%0Al%0All%0A%0All%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-12-02_16-26-46",
+            "content": "@@ -81,18 +81,16 @@\n %0Al%0Al%0Al%0A%0A\n-%0A%0A\n l%0All%0All%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-12-02_19-03-53",
+            "content": "@@ -1,1045 +1,111 @@\n-class Fone:%0A    def __init__(self, id: str, number: str):%0A        self.id = id%0A        self.number = number%0A%0A    def isValid(self) -%3E bool:%0A        if not self.id or not self.number:%0A            return False%0A        if any(c.isalpha() for c in self.number):%0A            return False%0A        return True%0A    %0A    def getId(self):%0A        return self.id%0A    %0A    def getNumber(self):%0A        return self.number%0A    %0A    def __str__(self):%0A        return f%22%7Bself.id%7D:%7Bself.number%7D%22%0A    %0Aclass Contact:%0A    def __init__(self, name: str):%0A        self.fone: list%5BFone%5D = %5B%5D%0A        self.name = name%0A        self.fav: bool = False%0A%0A    def addFone(self, id: str, number: str):%0A        fone = Fone(id, number)%0A        if not fone.isValid():%0A            print(%22fail: invalid number%22)%0A            return%0A        self.fone.append(fone)%0A        %0A%0A    def rmFone(self, index: int):%0A        self.fone.pop(index)%0A%0A    def toggleFav(self):%0A        if self.fav == False:%0A            self.fav = True%0A            return%0A        else:%0A            self.fav = False\n+%0A%0A%0A%0Aelifee%0A%0A%0Aelife%0Ae%0A%0Aelife%0Aelife%0Aelife%0A%0A%0Aygi%0A%0Akmmlk match%0A%0A%0A%0A%0A%0A%0A%0A%5D%0A%0A%0A%0A%0A%0Allll%0A%0Al%0Al%0Al%0Al%0A%0A%0A%0Al%0All%0All%0All%0A%0Al%0All%0A%0All\n %0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-12-02_19-54-18",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.id = id\n        self.number = number\n\n    def isValid(self) -> bool:\n        if not self.id or not self.number:\n            return False\n        if any(c.isalpha() for c in self.number):\n            return False\n        return True\n    \n    def getId(self):\n        return self.id\n    \n    def getNumber(self):\n        return self.number\n    \n    def __str__(self):\n        return f\"{self.id}:{self.number}\"\n    \nclass Contact:\n    def __init__(self, name: str):\n        self.fone: list[Fone] = []\n        self.name = name\n        self.fav: bool = False\n\n    def addFone(self, id: str, number: str):\n        fone = Fone(id, number)\n        if not fone.isValid():\n            print(\"fail: invalid number\")\n            return\n        self.fone.append(fone)\n        \n\n    def rmFone(self, index: int):\n        self.fone.pop(index)\n\n    def toggleFav(self):\n        if self.fav == False:\n            self.fav = True\n            return\n        else:\n            self.fav = False\n",
+            "lines": "44"
+        }
+    ]
+}
