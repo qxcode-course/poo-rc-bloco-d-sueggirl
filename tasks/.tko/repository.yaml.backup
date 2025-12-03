@@ -20,6 +20,7 @@ expanded:
 - poo@bloco_d-crud-com-mapas-e-enumerações
 tasks:
   poo@contato: '{rate:100}'
+  poo@agenda: '{rate:100}'
 flags:
   quests: 0
   tracks: 0

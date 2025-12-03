@@ -114,3 +114,4 @@
 2025-12-02 21:45:34, MOVE, v:1, k:poo@agenda, mode:BACK
 2025-12-02 21:45:40, MOVE, v:1, k:poo@agenda, mode:PICK
 2025-12-02 21:45:42, EXEC, v:1, k:poo@agenda, mode:FULL, rate:100
+2025-12-02 21:54:34, MOVE, v:1, k:poo@agenda, mode:BACK
