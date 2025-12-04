@@ -99,6 +99,7 @@ class Agenda:
     def rmContact(self, name: str):
         pos = self.findPosByName(name)
         if pos == -1:
+            
             print("fail: contact not found")
             return
         self.contact.pop(pos)
