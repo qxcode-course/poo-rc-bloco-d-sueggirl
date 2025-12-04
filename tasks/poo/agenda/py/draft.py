@@ -1,50 +1,51 @@
 class Fone:
-    def __init__(self, id: str, number: str):
+    def __init__(self, id: str, number:str):
         self.id = id
         self.number = number
 
-    def isValid(self) -> bool:
-        if not self.id or not self.number:
-            return False
-        if any(c.isalpha() for c in self.number):
-            return False
-        return True
-    
     def getId(self):
         return self.id
     
     def getNumber(self):
         return self.number
     
+    def eValido(self) -> bool:
+        if not self.id or not self.number:
+            return False 
+        if any(p.isalpha() for p in self.number):
+            return False
+        return True
+    
     def __str__(self):
         return f"{self.id}:{self.number}"
     
-class Contact:
-    def __init__(self, name: str):
-        self.fone: list[Fone] = []
-        self.name = name
-        self.fav: bool = False
+class Contato:
+    def __init__(self, nome: str, fone: list[Fone] = None):
+        if fone is None:
+            fone = []
+        self.fone = fone
+        self.nome = nome 
+        self.favorito: bool = False
 
     def addFone(self, id: str, number: str):
         fone = Fone(id, number)
-        if not fone.isValid():
+        if not fone.eValido():
             print("fail: invalid number")
-            return
+            return 
         self.fone.append(fone)
-        
 
-    def rmFone(self, index: int):
+    def delFone(self, index: int):
         self.fone.pop(index)
-
-    def toggleFav(self):
-        if self.fav == False:
-            self.fav = True
+    
+    def trocarFavorito(self):
+        if self.favorito == False:
+            self.favorito = True
             return
         else:
-            self.fav = False
+            self.favorito = False
 
-    def isFav(self) -> bool:
-        if self.fav == True:
+    def eFavorito(self) -> bool:
+        if self.favorito == True:
             return True
         else:
             return False
@@ -52,14 +53,14 @@ class Contact:
     def getFones(self):
         return self.fone
     
-    def getName(self):
-        return self.name
+    def getNome(self):
+        return self.nome
     
-    def setName(self, name: str):
-        self.name = name
+    def setNome(self, nome: str):
+        self.nome = nome
 
     def matches(self, pattern: str) -> bool:
-        if pattern in self.name:
+        if pattern in self.nome:
             return True
         for f in self.fone:
             if pattern in f.id or pattern in f.number:
@@ -68,25 +69,25 @@ class Contact:
 
     def __str__(self):
         fone = ", ".join([str(x) for x in self.fone])
-        if self.fav == True:
-            return f"@ {self.name} [{fone}]"
+        if self.favorito == True:
+            return f"@ {self.nome} [{fone}]"
         else:
-            return f"- {self.name} [{fone}]"
+            return f"- {self.nome} [{fone}]"
         
 class Agenda:
     def __init__(self):
-        self.contact: list[Contact] = []
+        self.contact: list[Contato] = []
 
     def findPosByName(self, name: str) -> int:
         for i, c in enumerate(self.contact):
-            if c.getName() == name:
+            if c.getNome() == name:
                 return i
         return -1
 
     def addContact(self, name: str, fones: list[Fone]):
         pos = self.findPosByName(name)
         if pos == -1:
-            contact = Contact(name)
+            contact = Contato(name)
             for f in fones:
                 contact.addFone(f.id, f.number)
             self.contact.append(contact)
@@ -108,21 +109,21 @@ class Agenda:
             return None
         return self.contact[pos]
 
-    def search(self, pattern: str) -> list[Contact]:
+    def search(self, pattern: str) -> list[Contato]:
         result = []
         for c in self.contact:
             if c.matches(pattern):
                 result.append(c)
-        return sorted(result, key=lambda x: x.getName())
+        return sorted(result, key=lambda x: x.getNome())
     
-    def getFavorited(self) -> list[Contact]:
-        return [c for c in self.contact if c.isFav()]
+    def getFavorited(self) -> list[Contato]:
+        return [c for c in self.contact if c.eFavorito()]
 
-    def getContacts(self) -> list[Contact]:
+    def getContacts(self) -> list[Contato]:
         return self.contact
     
     def __str__(self):
-        order = sorted(self.contact, key= lambda x:x.getName())
+        order = sorted(self.contact, key= lambda x:x.getNome())
         return "\n".join(str(contact) for contact in order)
         
 def main():
@@ -154,21 +155,21 @@ def main():
             if contact is None:
                 print("fail: contact not found")
             else:
-                contact.rmFone(index)
+                contact.delFone(index)
         elif args[0] == "tfav":
             name = args[1]
             contact = agenda.getContact(name)
             if contact is None:
                 print("fail: contact not found")
             else:
-                contact.toggleFav()
+                contact.trocarFavorito()
         elif args[0] == "favs":
             for c in agenda.getFavorited():
                 print(c)
         elif args[0] == "search":
             pattern = args[1]
             en = agenda.search(pattern)
-
             for contato in en:
                 print(contato)
+
 main()

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-03_07-05-43",
+            "content": "@@ -1,52 +0,0 @@\n-kk%E1%B9%95k%0Ak%C3%A7ok%C3%A7p%0AKeyboardInterrupt%0A%0Akmml%0A%C3%A7okp%0A%0Aokpok%0A%C3%A7okp\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-03_07-23-26",
+            "content": "@@ -49,75 +49,4 @@\n %C3%A7okp\n-%0A%0A%0A%0Aws%0Aelif%0Aa%0Ad%0A%0A%0Aa%0A%0Aandea%0Aa%0Ae%0Aad%0Aa%0Ad%0Aa%0Aed%0Aandda%0Aaw%0A%0Ada%0A%0Asortedr%0Aa%0Aa%0Aa%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-12-03_07-29-32",
+            "content": "@@ -120,92 +120,4 @@\n a%0Aa%0A\n-%0A%0A%0A%C3%A7ll%C3%A7%0A%0A%0A%C3%A7%0A%0A%C3%A7%0A%C3%A7%C3%A7%0A%C3%A7%0Apassp%0Apassp%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%5Bpass%0A p%0A p%0A p%0A passp%0A passp%0A p%5D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-12-03_22-04-30",
+            "content": "@@ -1,365 +1,281 @@\n-kk%E1%B9%95k%0Ak%C3%A7ok%C3%A7p%0AKeyboardInterrupt%0A%0Akmml%0A%C3%A7okp%0A%0Aokpok%0A%C3%A7okp%0A%0A%0A%0Aws%0Aelif%0Aa%0Ad%0A%0A%0Aa%0A%0Aandea%0Aa%0Ae%0Aad%0Aa%0Ad%0Aa%0Aed%0Aandda%0Aaw%0A%0Ada%0A%0Asortedr%0Aa%0Aa%0Aa%0A%0A%0A%0A%C3%A7ll%C3%A7%0A%0A%0A%C3%A7%0A%0A%C3%A7%0A%C3%A7%C3%A7%0A%C3%A7%0Apassp%0Apassp%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%5Bpass%0A p%0A p%0A p%0A passp%0A passp%0A p%5D%0A%0A%0A %5D%0A%C3%B5%0Ai%5B9%0A  %0A  %0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  99%0A  9%0A  %0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%5D\n+@@ -208,158 +208,4 @@%0A %250A p%255D%0A-%250A%250A%250A %255D%250A%25C3%25B5%250Ai%255B9%250A  %250A  %250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  -%250A  99%250A  9%250A  %250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%250A  9%255D%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-12-03_22-35-04",
+            "content": "@@ -0,0 +1,365 @@\n+kk%E1%B9%95k%0Ak%C3%A7ok%C3%A7p%0AKeyboardInterrupt%0A%0Akmml%0A%C3%A7okp%0A%0Aokpok%0A%C3%A7okp%0A%0A%0A%0Aws%0Aelif%0Aa%0Ad%0A%0A%0Aa%0A%0Aandea%0Aa%0Ae%0Aad%0Aa%0Ad%0Aa%0Aed%0Aandda%0Aaw%0A%0Ada%0A%0Asortedr%0Aa%0Aa%0Aa%0A%0A%0A%0A%C3%A7ll%C3%A7%0A%0A%0A%C3%A7%0A%0A%C3%A7%0A%C3%A7%C3%A7%0A%C3%A7%0Apassp%0Apassp%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%5Bpass%0A p%0A p%0A p%0A passp%0A passp%0A p%5D%0A%0A%0A %5D%0A%C3%B5%0Ai%5B9%0A  %0A  %0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  -%0A  99%0A  9%0A  %0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%0A  9%5D\n",
+            "lines": "122"
+        },
+        {
+            "label": "2025-12-03_23-17-13",
+            "content": "",
+            "lines": "0"
+        }
+    ]
+}
