@@ -69,3 +69,8 @@
 2025-12-03 23:32:59, MOVE, v:1, k:poo@agenda, mode:BACK
 2025-12-03 23:33:08, MOVE, v:1, k:poo@contato, mode:PICK
 2025-12-03 23:33:09, EXEC, v:1, k:poo@contato, mode:FULL, rate:100
+2025-12-03 23:33:40, EXEC, v:1, k:poo@contato, mode:FULL, rate:100
+2025-12-03 23:33:41, MOVE, v:1, k:poo@contato, mode:BACK
+2025-12-03 23:34:24, SELF, v:1, k:poo@agenda, rate:100, alone:9, study:350
+2025-12-03 23:35:04, MOVE, v:1, k:poo@contato, mode:PICK
+2025-12-03 23:35:05, EXEC, v:1, k:poo@contato, mode:FULL, rate:100
